@@ -1,0 +1,62 @@
+@mixin card-logo{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@mixin background{
+    background-color:#777;
+    
+}
+
+@mixin link{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    transition: all 500ms ease-out;
+    &:hover{
+        border-color: black;
+        background-color: gold;
+        transition: all 500ms ease-in-out;
+    }
+}
+
+@mixin ul{
+   ul{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding-inline-start: 0px;
+        align-items: center;
+        justify-content: center;
+   }
+}
+
+@mixin li{
+    li{
+        list-style-type:none;
+    }
+}
+
+@mixin input{
+    input{
+        display: flex;
+        border-radius: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 40px;
+        font-size: large;
+        padding: 10px;
+    }
+    textarea{
+        padding: 10px;
+        font-size: large;
+        border-radius: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 200px;
+    }
+
+}

@@ -1,0 +1,23 @@
+@import "../utils/mixins";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : center;
+    height: 200px;
+    
+    @include background;
+    
+    @include ul;
+
+    @include li;
+
+    img{
+        @include card-logo;
+    }
+};
+
+.card-footer{
+    width: 100%;
+}

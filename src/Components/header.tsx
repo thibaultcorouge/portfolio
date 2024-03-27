@@ -1,16 +1,11 @@
+import Navbar from "./navbar";
+
 function Header () {
 
     return(
-        <header>
-            <div><img src="#" alt="logo" /></div>
-            <nav>
-                <ul>
-                    <li><a href="/">CV</a></li>
-                    <li><a href="/project">Project</a></li>
-                    <li><a href="#">contact</a></li>
-                    <li></li>
-                </ul>
-            </nav>
+        <header className="header">
+            <div><a href="#"><img src="#" alt="logo" /></a></div>
+            <Navbar />
         </header>
     )
 }

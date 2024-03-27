@@ -1,0 +1,8 @@
+@import "../utils/mixins.scss";
+
+@include ul;
+@include li;
+
+.project-page{
+    height: 1000px;
+}
