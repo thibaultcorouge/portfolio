@@ -14,14 +14,39 @@
     justify-content: center;
 }
 .about-img{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     background-color: red;
+    border-radius: 100%;
 }
 
 .about-p{
-    margin-left: 50px;
+    margin-left: 100px;
     width: 50%;
     background-color: red;
     @include p;
 }
+
+@media screen and (max-width: 768px) {
+    .about-div{
+        @include display-flex-col;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto ;
+    }
+   
+    .about-img{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .about-p{
+        margin: 20px;
+        padding: 5px;
+        width: auto;
+        
+    }
+
+}
+

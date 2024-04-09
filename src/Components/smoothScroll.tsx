@@ -1,11 +1,11 @@
 import React from "react";
 
-interface SmoothScrollProps {
+interface smoothScrollProps {
     targetId: string;
     children: React.ReactNode;
 }
 
-const SmoothScroll: React.FC<SmoothScrollProps> = ({targetId, children }) => {
+const SmoothScroll: React.FC<smoothScrollProps> = ({targetId, children }) => {
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         const targetElement = document.getElementById(targetId);
