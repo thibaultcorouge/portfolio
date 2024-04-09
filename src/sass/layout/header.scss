@@ -4,17 +4,16 @@
 .header{
 
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     height: 350px;
-    padding-top: 50px;
+    padding-top: 20px;
     box-sizing: border-box;
     
     .whoami{
         @include display-flex-col;
         justify-content: center;
         font-size: 50px;
-        
 
     }
     a{
@@ -23,3 +22,10 @@
     @include ul;
     @include li;
 }
+
+@media screen and (max-width: 768px) {
+    .header{
+        padding-top: 20px;
+    }
+}
+

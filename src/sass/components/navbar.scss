@@ -1,13 +1,35 @@
 @import "../utils/mixins.scss";
 
-.navbar{
-    @include display-flex-row;
-    justify-content: flex-start;
+.nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: var(-z-fixed);
+    background-color: grey;
+}
 
-    ul {
-        @include ul;
-        @include display-flex-row;
-    }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    height: var(--header-height);
+    margin:1rem;
+}
+
+.nav-toggle, 
+.nav-close {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+} 
+
+.navbar-links{
+    @include ul;
+    @include display-flex-col;
+    row-gap: 2.5rem;
+
 
     li{
         @include li;
@@ -19,12 +41,51 @@
         border-radius: 15px;
         border-width: 3px;
         border-color: $tertiary-color;
-        // border-style: solid;
-        // position: fixed;
-        // right:100px;
-        // z-index: 100;
+    }
+}
 
-        
+
+
+.nav-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.show-menu {
+    right: 0;
+}
+
+
+@media  screen and (max-width: 768px) {
+    .nav-menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: grey;
+        width: 30%;
+        height: 100%;
+        padding: 4rem 2rem 0;
+        transition: right 0.4s ease-in-out;
     }
 
+    .show-menu{
+        right: 0px;
+    }
+    
+}
+
+@media screen and (min-width:768px){
+    .nav{
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .nav-toggle,.nav-close{
+        display: none;
+    }
+
+    .navbar-links{
+        flex-direction: row;
+        column-gap: 1rem;
+    }
 }

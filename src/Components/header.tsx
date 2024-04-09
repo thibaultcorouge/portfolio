@@ -4,8 +4,8 @@ function Header () {
 
     return(
         <header className="header">
-            <div className="whoami"><a href="#">Hi i'm Thibault</a></div>
             <Navbar />
+            <div className="whoami"><a href="#">Hi i'm Thibault</a></div>
         </header>
     )
 }

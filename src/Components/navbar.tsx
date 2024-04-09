@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from 'react';
 import SmoothScroll from "./smoothScroll";
+import {IoClose, IoMenu} from "react-icons/io5";
 
-function Navbar(){
+const Navbar: React.FC = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
+    const closeMenuOnMobile = () => {
+        if (window.innerWidth <= 768) {
+            setShowMenu(false);
+        }
+    }
+
     return(    
-        <nav className="navbar">
-            {/* <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#Resume">Resume</a></li>
-            </ul> */}
-        <li><SmoothScroll targetId="About">About</SmoothScroll></li>
-        <li><SmoothScroll targetId="project">Project</SmoothScroll></li>
-        <li><SmoothScroll targetId="contact">Contact</SmoothScroll></li>
-        <li><SmoothScroll targetId="resume">Resume</SmoothScroll></li>
+        <nav className="nav">
+            <div className="navbar">
+                <div id="nav-menu" className={`nav-menu ${showMenu ? "show-menu" : ""}`}>
+                    <ul className="navbar-links">
+                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="About">About</SmoothScroll></li>
+                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="project">Project</SmoothScroll></li>
+                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="contact">Contact</SmoothScroll></li>
+                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="resume">Resume</SmoothScroll></li>
+                    </ul>
+                    <div className="nav-close" id="nav-close" onClick={toggleMenu}>
+                       <IoClose />
+                    </div>
+                </div>
+                <div className="nav-toggle" id="nav-toggle" onClick={toggleMenu}>
+                    <IoMenu />
+                </div>
+            </div>
         </nav>
     )
-}
 
+}
 export default Navbar;
