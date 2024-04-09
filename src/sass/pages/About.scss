@@ -1,0 +1,27 @@
+.about-section{
+    height: auto;
+    margin: auto;
+    
+
+    h2{
+        @include h2;
+        margin-left: 40px;
+    }
+}
+
+.about-div{
+    @include display-flex-row;
+    justify-content: center;
+}
+.about-img{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.about-p{
+    margin-left: 50px;
+    width: 50%;
+    background-color: red;
+    @include p;
+}

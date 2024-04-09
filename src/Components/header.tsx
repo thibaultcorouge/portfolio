@@ -4,10 +4,10 @@ function Header () {
 
     return(
         <header className="header">
-            <div><a href="#"><img src="#" alt="logo" /></a></div>
+            <div className="whoami"><a href="#">Hi i'm Thibault</a></div>
             <Navbar />
         </header>
     )
 }
 
-export default Header;
+export default Header

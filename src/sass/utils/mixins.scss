@@ -1,36 +1,28 @@
-@mixin card-logo{
-    height: 40px;
-    width: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
+@import "./variables.scss";
 
+@mixin h2 {
+    font-size: 60px;
+}
 @mixin background{
-    background-color:#777;
+    background-color:$tertiary-color;
     
 }
 
+@mixin p {
+    font-size: 20px;
+}
+
 @mixin link{
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: $secondary-color;
+    list-style-type: none;
     text-decoration: none;
-    color: black;
-    transition: all 500ms ease-out;
-    &:hover{
-        border-color: black;
-        background-color: gold;
-        transition: all 500ms ease-in-out;
-    }
+    color: $tertiary-color;
 }
 
 @mixin ul{
    ul{
-        display: flex;
-        flex-direction: row;
         list-style-type: none;
         padding-inline-start: 0px;
-        align-items: center;
-        justify-content: center;
    }
 }
 
@@ -40,23 +32,15 @@
     }
 }
 
-@mixin input{
-    input{
-        display: flex;
-        border-radius: 13px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        height: 40px;
-        font-size: large;
-        padding: 10px;
-    }
-    textarea{
-        padding: 10px;
-        font-size: large;
-        border-radius: 13px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        height: 200px;
-    }
 
+@mixin display-flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@mixin display-flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }

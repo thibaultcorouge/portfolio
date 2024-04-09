@@ -1,16 +1,30 @@
 @import "../utils/mixins.scss";
 
 .navbar{
+    @include display-flex-row;
+    justify-content: flex-start;
 
-@include ul;
-@include li;
+    ul {
+        @include ul;
+        @include display-flex-row;
+    }
 
-            a{
-                padding: 10px;
-                border-radius: 30px;
-                border-width: 3px;
-                border-color: gold;
-                border-style: solid;
-            }
+    li{
+        @include li;
+
+    }
+
+    a{
+        padding: 10px;
+        border-radius: 15px;
+        border-width: 3px;
+        border-color: $tertiary-color;
+        // border-style: solid;
+        // position: fixed;
+        // right:100px;
+        // z-index: 100;
+
+        
+    }
 
 }

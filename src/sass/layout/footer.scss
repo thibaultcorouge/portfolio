@@ -9,15 +9,4 @@
     
     @include background;
     
-    @include ul;
-
-    @include li;
-
-    img{
-        @include card-logo;
-    }
 };
-
-.card-footer{
-    width: 100%;
-}

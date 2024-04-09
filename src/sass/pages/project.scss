@@ -1,8 +1,44 @@
 @import "../utils/mixins.scss";
+@import"../utils/variables.scss";
 
-@include ul;
-@include li;
+
+
 
 .project-page{
-    height: 1000px;
+    height: auto;
+    margin: auto;
+    h2{
+        @include h2;
+        margin-left: 40px;
+    }
+}
+
+.project-div{
+    @include display-flex-row;
+    justify-content: space-around;
+    @include ul;
+    @include li;
+    background-color: red;
+    border: solid 3px black;
+
+.project-description{
+    margin-top: 50px;
+    @include display-flex-row;
+    justify-content: center;
+    a{
+        width: 200px;
+        height: 500px;
+        background-color: red;
+        border: solid 3px black;
+    }
+
+    p{
+        max-width: 600px;
+        @include p;
+        background-color: red;
+        border: solid 3px black;
+    }
+    background-color: red;
+    border: solid 3px black;
+}
 }
