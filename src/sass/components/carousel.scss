@@ -1,0 +1,21 @@
+@import "../utils/mixins.scss";
+@import"../utils/variables.scss";
+
+
+.button-carousel{
+    font-size: 2rem;
+    background-color: transparent ;
+    border: none;
+    cursor: pointer;
+    z-index: 0.5;
+};
+
+
+@media screen and (max-width:768px) {
+    .button-carousel{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 1.5rem;
+    }
+
+}

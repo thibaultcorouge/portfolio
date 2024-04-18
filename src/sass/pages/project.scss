@@ -1,44 +1,77 @@
 @import "../utils/mixins.scss";
-@import"../utils/variables.scss";
+@import "../utils/variables.scss";
 
+.carousel {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 
+}
 
-.project-page{
-    height: auto;
-    margin: auto;
-    margin-top: 10rem;
-    h2{
-        @include h2;
-        margin-left: 40px;
+.project {
+    h2 {
+      @include h2;
+      margin-left: 2rem;
     }
 }
 
-.project-div{
-    @include display-flex-row;
-    justify-content: space-around;
-    @include ul;
-    @include li;
-    background-color: red;
-    border: solid 3px black;
+.project-div {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid 3px black;
+  height: auto;
+}
 
-.project-description{
-    margin-top: 50px;
-    @include display-flex-row;
-    justify-content: center;
+.carousel-track{
+    display: flex;
+    transition: transform 0.5s ease;
+    width: auto;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100% ;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    height: auto;
+    
     a{
         width: 200px;
-        height: 500px;
+        height: auto;
         background-color: red;
         border: solid 3px black;
+
+        img{
+            height: auto;
+            width: 150px;
+        }
     }
 
-    p{
-        max-width: 600px;
-        @include p;
-        background-color: red;
-        border: solid 3px black;
-    }
-    background-color: red;
-    border: solid 3px black;
+
 }
+
+
+
+.project-description {
+  @include display-flex-col;
+  justify-content: center;
+  padding: 0.5rem;
+  
+
+  p {
+    height: auto;
+    width: 100%;
+    @include p;
+  }
 }
+

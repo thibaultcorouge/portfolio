@@ -20,8 +20,9 @@ const Navbar: React.FC = () => {
             <div className="navbar">
                 <div id="nav-menu" className={`nav-menu ${showMenu ? "show-menu" : ""}`}>
                     <ul className="navbar-links">
+                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="root" >Home</SmoothScroll></li>
                         <li onClick={closeMenuOnMobile}><SmoothScroll targetId="About">About</SmoothScroll></li>
-                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="project">Project</SmoothScroll></li>
+                        <li onClick={closeMenuOnMobile}><SmoothScroll targetId="Project">Project</SmoothScroll></li>
                         <li onClick={closeMenuOnMobile}><SmoothScroll targetId="contact">Contact</SmoothScroll></li>
                         <li onClick={closeMenuOnMobile}><SmoothScroll targetId="resume">Resume</SmoothScroll></li>
                     </ul>
